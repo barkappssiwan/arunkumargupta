@@ -16,11 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Increment vote
     async function incrementVote() {
+        voteButton.textContent = 'Voting...';
+        voteButton.disabled = true;
         try {
             await fetch('/api/vote', { method: 'POST' });
-            loadVotes(); // Reload to update display
+            loadVotes();
         } catch (error) {
             console.error('Vote error:', error);
+        } finally {
+            voteButton.textContent = 'Vote Now';
+            voteButton.disabled = false;
         }
     }
 
