@@ -1,7 +1,7 @@
 // api/vote.js
 import { MongoClient } from 'mongodb';
 
-const uri = process.env.MONGODB_URI; // Set this in Vercel env vars
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 const dbName = 'votesdb';
 const collectionName = 'votes';
