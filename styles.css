@@ -1,0 +1,127 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+.navbar {
+    background-color: green;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 1rem;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu a:hover {
+    background-color: red;
+}
+
+.hero {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photo-placeholder,
+.banner-placeholder {
+    width: 300px;
+    height: 200px;
+    background-color: #ddd;
+    margin: 1rem auto;
+    display: block;
+}
+
+.section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.quotes-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.quote {
+    flex: 1;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+#vote-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#vote-button:hover {
+    background-color: red;
+}
+
+#vote-count {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+a {
+    color: red;
+}
