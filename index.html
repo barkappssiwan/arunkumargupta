@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLA Arun Kumar Singh - Official Website</title>
+    <title>MLA Arun Kumar Gupta - Official Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,22 +22,24 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to the Official Website of MLA Arun Kumar Singh</h1>
-            <p>Serving the people with dedication and integrity.</p>
-            <img src="placeholder-photo.jpg" alt="Placeholder for MLA Arun Kumar Singh's Photo" class="photo-placeholder">
-            <img src="placeholder-banner.jpg" alt="Placeholder for RJD Party Banner" class="banner-placeholder">
+            <h1 class="holographic-text">Welcome to the Official Website of MLA Arun Kumar Singh</h1>
+            <p class="hero-subtitle">Serving the people with dedication and integrity.</p>
+            <div class="placeholder-container">
+                <img src="placeholder-photo.jpg" alt="MLA Arun Kumar Singh's Photo" class="photo-placeholder">
+                <img src="placeholder-banner.jpg" alt="RJD Party Banner" class="banner-placeholder">
+            </div>
         </div>
     </section>
 
     <section id="about" class="section">
-        <h2>About MLA Arun Kumar Singh</h2>
+        <h2 class="section-title">About MLA Arun Kumar Singh</h2>
         <p>Arun Kumar Singh is a dedicated Member of the Legislative Assembly (MLA) representing the RJD party. He is committed to the development and welfare of his constituency.</p>
     </section>
 
     <section id="quotes" class="section">
-        <h2>Inspirational Quotes</h2>
+        <h2 class="section-title">Inspirational Quotes</h2>
         <div class="quotes-container">
-            <div class="quote">
+            <div class="quote-card">
                 <h3>English Quotes</h3>
                 <ul>
                     <li>"The best way to predict the future is to create it." - Peter Drucker</li>
@@ -45,7 +47,7 @@
                     <li>"Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for." - Barack Obama</li>
                 </ul>
             </div>
-            <div class="quote">
+            <div class="quote-card">
                 <h3>Hindi Quotes</h3>
                 <ul>
                     <li>"परिवर्तन संसार का नियम है।" - महात्मा गांधी</li>
@@ -57,19 +59,19 @@
     </section>
 
     <section id="vote" class="section">
-        <h2>Vote for Support</h2>
-        <p>Show your support by voting here. Note: This is a simple client-side voting system using local storage. Votes are per browser/device and not shared across users. For a real shared voting system, a backend server (e.g., Node.js with database) would be required.</p>
-        <button id="vote-button">Vote Now</button>
-        <p id="vote-count">Total Votes: 0</p>
+        <h2 class="section-title">Vote for Support</h2>
+        <p>Show your support by voting here. Votes are now shared across all visitors!</p>
+        <button id="vote-button" class="vote-btn">Vote Now</button>
+        <p id="vote-count" class="vote-display">Loading votes...</p>
     </section>
 
     <section id="contact" class="section">
-        <h2>Contact</h2>
+        <h2 class="section-title">Contact</h2>
         <p>Email: example@email.com</p>
         <p>Phone: +123-456-7890</p>
     </section>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 MLA Arun Kumar Singh. All rights reserved.</p>
     </footer>
 
