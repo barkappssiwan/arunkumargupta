@@ -1,7 +1,7 @@
 /* Reset & Base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
     color: #333;
     overflow-x: hidden;
@@ -82,14 +82,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="20" r="0.5" fill="rgba(255,0,0,0.2)"/><circle cx="50" cy="80" r="1.5" fill="rgba(0,128,0,0.3)"/></svg>') repeat;
-    animation: particles 20s linear infinite;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="20" r="0.5" fill="rgba(255,0,0,0.2)"/><circle cx="50" cy="80" r="1.5" fill="rgba(0,128,0,0.3)"/></svg>') repeat,
+                linear-gradient(45deg, rgba(255,0,0,0.2), rgba(0,128,0,0.2));
+    animation: particles 20s linear infinite, circuitGlow 5s ease-in-out infinite;
     pointer-events: none;
 }
 @keyframes particles { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-100px) rotate(360deg); } }
+@keyframes circuitGlow { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
 .hero-content { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
 .holographic-text {
     font-size: 2.5rem;
+    font-weight: 700;
     background: linear-gradient(45deg, #fff, #ff0000, #008000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -144,7 +147,11 @@ body {
     transition: all 0.3s ease;
     animation: fadeInUp 1s ease;
 }
-.quote-card:hover { transform: translateY(-5px); box-shadow: 0 15px 50px rgba(0, 128, 0, 0.2); }
+.quote-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 50px rgba(0, 128, 0, 0.3), 0 0 20px rgba(255, 0, 0, 0.5);
+    background: linear-gradient(45deg, rgba(255,255,255,0.95), rgba(0,128,0,0.1));
+}
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .quote-card h3 { color: #006400; margin-bottom: 1rem; }
 .quote-card ul { list-style: none; }
@@ -166,6 +173,7 @@ body {
 }
 @keyframes pulse { 0% { box-shadow: 0 5px 20px rgba(0, 100, 0, 0.3); } 50% { box-shadow: 0 5px 30px rgba(255, 0, 0, 0.5); } 100% { box-shadow: 0 5px 20px rgba(0, 100, 0, 0.3); } }
 .vote-btn:hover { background: linear-gradient(45deg, #ff0000, #cc0000); transform: scale(1.05); }
+.vote-btn:disabled { background: #666; cursor: not-allowed; }
 .vote-display {
     font-size: 1.5rem;
     margin-top: 1rem;
