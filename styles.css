@@ -125,6 +125,22 @@ body {
     margin: 0 auto;
 }
 .section:nth-child(even) { background: rgba(255, 255, 255, 0.8); }
+
+/* Highlighted Vote Section (now comes early) */
+.vote-highlight {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(0, 128, 0, 0.1));
+    border: 2px dashed #ff0000;
+    border-radius: 20px;
+    margin: 2rem auto;
+    padding: 3rem 1.5rem !important;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+    animation: votePulse 3s infinite;
+}
+@keyframes votePulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.2); }
+    50% { box-shadow: 0 0 50px rgba(255, 0, 0, 0.4); }
+}
+
 .section-title {
     font-size: 2.5rem;
     text-align: center;
@@ -171,8 +187,15 @@ body {
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
 }
-@keyframes pulse { 0% { box-shadow: 0 5px 20px rgba(0, 100, 0, 0.3); } 50% { box-shadow: 0 5px 30px rgba(255, 0, 0, 0.5); } 100% { box-shadow: 0 5px 20px rgba(0, 100, 0, 0.3); } }
-.vote-btn:hover { background: linear-gradient(45deg, #ff0000, #cc0000); transform: scale(1.05); }
+@keyframes pulse { 
+    0% { box-shadow: 0 5px 20px rgba(0, 100, 0, 0.3); } 
+    50% { box-shadow: 0 5px 30px rgba(255, 0, 0, 0.5); } 
+    100% { box-shadow: 0 5px 20px rgba(0, 100, 0, 0.3); } 
+}
+.vote-btn:hover { 
+    background: linear-gradient(45deg, #ff0000, #cc0000); 
+    transform: scale(1.05); 
+}
 .vote-btn:disabled { background: #666; cursor: not-allowed; }
 .vote-display {
     font-size: 1.5rem;
@@ -241,4 +264,5 @@ body {
     .placeholder-container { flex-direction: column; align-items: center; }
     .social-icons { flex-direction: column; align-items: center; }
     .social-link { width: 80%; justify-content: center; }
+    .vote-highlight { padding: 2rem 1rem !important; }
 }
